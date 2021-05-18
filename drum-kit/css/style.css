@@ -1,0 +1,37 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html {
+    background: #c0392b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e44ad, #c0392b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.keys { 
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    border: .3rem solid white;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem .5rem;
+    text-align: center;
+    width: 5rem;
+    font-size: 2rem;
+    background: rgba(63, 63, 63, 0.253);
+    color: white;
+    text-shadow: 0 0 1rem whitesmoke;
+}
