@@ -29,9 +29,26 @@ html, body {
     margin: 1rem;
     padding: 1rem .5rem;
     text-align: center;
-    width: 5rem;
-    font-size: 2rem;
+    width: 7rem;
+    font-size: 1rem;
     background: rgba(63, 63, 63, 0.253);
     color: white;
     text-shadow: 0 0 1rem whitesmoke;
+    transition: all .07s ease;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: coral;
+    box-shadow: 0 0 1rem coral;
+}
+
+kbd{
+    display: block;
+    font-size: 2rem;
+}
+
+.sound{
+    font-size: 1.2em;
+    letter-spacing: .1 rem;
 }
