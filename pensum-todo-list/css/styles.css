@@ -1,0 +1,21 @@
+body{
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+}
+
+.container{
+    max-width: 25em;
+}
+
+input[type=text], input[type=text]:focus{
+    color: rgb(255, 255, 255);
+    border: none;
+    max-width: 25em;
+}
+
+.todos li{
+    background: #fdbb2d;
+}
+
+.delete{
+    cursor: pointer;
+}
