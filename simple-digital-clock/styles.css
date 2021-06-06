@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap');
+body{
+    font-family: 'Atomic Age', cursive;
+}
+
+.clock{
+    font-size: 5em;
+    margin: 2.5em;
+    padding: auto;
+    text-align: center;
+}
