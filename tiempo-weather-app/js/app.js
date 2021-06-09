@@ -1,0 +1,44 @@
+const cityForm = document.querySelector('form');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
+
+const updateCity = async (city) => {
+    const cityDetail = await getCity(city);
+    const cityWeather = await getCurrentWeather(cityDetail.Key);
+
+    //both key and value have same name, thus we can use object shorthand notation
+    return {cityDetail, cityWeather};
+};
+
+const updateUI = (data) => {
+    const cityInfo = data.cityDetail;
+    const weather = data.cityWeather;
+
+    //update details template
+    details.innerHTML = `
+        <h5 class="my-3">${cityInfo.EnglishName}</h5>
+        <div class="my-3">${weather.WeatherText}</div>
+        <div class="display-4 my-4">
+            <span>${weather.Temperature.Metric.Value}</span>
+            <span>&deg;C</span>
+    `;
+
+    //remove d-none class if present in card
+    if(card.classList.contains('d-none')){
+        card.classList.remove('d-none');
+    }
+};
+
+cityForm.addEventListener('submit', e => {
+    //prevent default action when submitting form
+    e.preventDefault();
+
+    //get city input value
+    const cityName = cityForm.city.value.trim();
+    cityForm.reset();
+
+    //update UI with city input
+    updateCity(cityName)
+        .then(data => updateUI(data))
+        .catch(err => console.log(err));
+});
