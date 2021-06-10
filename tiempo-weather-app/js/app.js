@@ -61,6 +61,7 @@ cityForm.addEventListener('submit', e => {
     localStorage.setItem('cityName', cityName);
 });
 
+//if city name is saved in local storage, then immediately query the weather for that city
 if(localStorage.getItem('cityName')){
     updateCity(localStorage.getItem('cityName'))
         .then(data => updateUI(data))
