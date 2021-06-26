@@ -1,0 +1,80 @@
+:root{
+    --main-bg: hsl(233, 47%, 7%);
+    --card-bg: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-color: hsl(0, 0%, 100%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-color: hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-bg);
+    font-size: 15px;
+    color: var(--paragraph);
+}
+
+img{
+    width: 100%;
+}
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+
+.container{
+    margin: 30px;
+}
+
+.card{
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image img{
+    border-radius: 8px 8px 0 0;
+}
+
+.card-content{
+    padding: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.card-content h1{
+    color: var(--main-color);
+    font-size: 1.75em;
+    padding-bottom: 20px;
+    /*padding: 0 40px 20px 40px;*/
+}
+
+.card-content span{
+    color: var(--accent);
+}
+
+.card-content p{
+    color: var(--paragraph);
+    padding: 0 20px;
+}
+
+.stats-box{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.stat{
+    padding: 15px;
+}
